@@ -30,7 +30,7 @@ const Home: React.FC = () => {
     <>
       {/* <IonPage> */}
         <Header />
-        <IonContent className="ion-padding mx-auto" fullscreen>
+        <IonContent className="ion-padding mx-auto no-scroll" fullscreen>
         <div style={{width:'400px', maxWidth:'100%', height:'100%', margin:'auto'}}>
         <IonSegment value={currentSection} onIonChange={handleChange}>
         <IonSegmentButton value="LOGIN_PAGE">
