@@ -1,16 +1,15 @@
-import { IonContent, IonFab, IonFabButton, IonIcon } from "@ionic/react";
+import { IonContent } from "@ionic/react";
 import Header from "../components/Header";
-import { add } from "ionicons/icons";
 import FloatingButton from "../components/FloatingButton";
 
-const Home: React.FC = () => {
+const Community: React.FC = () => {
   return (
     <>
       {/* <Header /> */}
-      <IonContent>Heyy from home
+      <IonContent>Heyy from community
       <FloatingButton></FloatingButton>
       </IonContent>
     </>
   );
 };
-export default Home;
+export default Community;

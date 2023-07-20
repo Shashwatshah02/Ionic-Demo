@@ -28,9 +28,9 @@ const Auth: React.FC = () => {
   return (
     <>
       {/* <IonPage> */}
-        <Header />
+        {/* <Header /> */}
         <IonContent className="ion-padding mx-auto no-scroll" fullscreen>
-        <div style={{width:'400px', maxWidth:'100%', height:'100%', margin:'auto'}}>
+        <div style={{width:'400px', maxWidth:'100%', height:'100vh', margin:'auto'}}>
         <IonSegment value={currentSection} onIonChange={handleChange}>
         <IonSegmentButton value="LOGIN_PAGE">
           <IonLabel>Login</IonLabel>
