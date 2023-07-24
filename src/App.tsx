@@ -48,6 +48,7 @@ import Coupons from "./pages/Coupons";
 import Community from "./pages/Community";
 import Profile from "./pages/Profile";
 import { useRef } from "react";
+import EditProfile from "./pages/EditProfile";
 
 setupIonicReact();
 
@@ -75,6 +76,7 @@ const App: React.FC = () => {
               exact={true}
             />
             <Route path="/profile" render={() => <Profile />} exact={true} />
+            <Route path="/edit-profile" render={() => <EditProfile />} exact={true} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">

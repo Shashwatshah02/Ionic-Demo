@@ -27,7 +27,7 @@ const Auth: React.FC = () => {
   }
   return (
     <>
-      {/* <IonPage> */}
+      <IonPage>
         {/* <Header /> */}
         <IonContent className="ion-padding mx-auto no-scroll" fullscreen>
         <div style={{width:'400px', maxWidth:'100%', height:'100vh', margin:'auto'}}>
@@ -42,7 +42,7 @@ const Auth: React.FC = () => {
       {currentSection === "LOGIN_PAGE" ? <LoginPage/>:<SignUp/>}
         </div> 
         </IonContent>
-      {/* </IonPage> */}
+      </IonPage>
     </>
   );
 };
