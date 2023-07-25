@@ -27,8 +27,8 @@ const Home: React.FC = () => {
         <IonToolbar>
           <IonTitle>Home</IonTitle>
           <IonButtons collapse={true} slot="end">
-            <IonButton id="open-modal1"><IonIcon icon={personOutline} /></IonButton>
-            <IonModal ref={modal} trigger="open-modal1" initialBreakpoint={0.5} breakpoints={[0, 1]}>
+            <IonButton id="open-modal-home-header"><IonIcon icon={personOutline} /></IonButton>
+            <IonModal ref={modal} trigger="open-modal-home-header" initialBreakpoint={0.5} breakpoints={[0, 1]}>
           <div className="block">Block of Content</div>
         </IonModal>
           </IonButtons>
@@ -38,9 +38,9 @@ const Home: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Home</IonTitle>
-            <IonButtons collapse={true} slot="end" id="open-modal2">
+            <IonButtons collapse={true} slot="end" id="open-modal-home-title">
               <IonButton><IonIcon icon={personOutline} /></IonButton>
-              <IonModal ref={modal} trigger="open-modal2" initialBreakpoint={0.5} breakpoints={[0, 1]}>
+              <IonModal ref={modal} trigger="open-modal-home-title" initialBreakpoint={0.5} breakpoints={[0, 1]}>
           <div className="block" style={{padding:'5px'}}>Block of Content</div>
         </IonModal>
             </IonButtons>
