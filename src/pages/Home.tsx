@@ -16,10 +16,23 @@ import {
 import Header from "../components/Header";
 import { add, personOutline } from "ionicons/icons";
 import FloatingButton from "../components/FloatingButton";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import Auth from "./Auth";
+import Profile from "./Profile";
+import EditProfile from "./EditProfile";
 
 const Home: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
+  const [page, setPage] = useState("complete-profile");
+  // const handleChange = () => {
+  //   if (page == "") {
+  //     setPage("login");
+  //   } else if (page == "login") {
+  //     setPage("complete-profile");
+  //   } else if (page == "complete-profile") {
+  //     setPage("view-profile");
+  //   }
+  // };
   return (
     <IonPage>
       {/* <Header /> */}
@@ -27,10 +40,21 @@ const Home: React.FC = () => {
         <IonToolbar>
           <IonTitle>Home</IonTitle>
           <IonButtons collapse={true} slot="end">
-            <IonButton id="open-modal-home-header"><IonIcon icon={personOutline} /></IonButton>
-            <IonModal ref={modal} trigger="open-modal-home-header" initialBreakpoint={0.5} breakpoints={[0, 1]}>
-          <div className="block">Block of Content</div>
-        </IonModal>
+            <IonButton id="open-modal-home-header">
+              <IonIcon icon={personOutline} />
+            </IonButton>
+            <IonModal
+              ref={modal}
+              trigger="open-modal-home-header"
+              initialBreakpoint={0.5}
+              breakpoints={[0, 1]}
+            >
+              <div className="block">
+                {page === "" ? <Auth></Auth> : null}
+                {page === "login" ? <EditProfile></EditProfile> : null}
+                {page === "complete-profile" ? <Profile></Profile> : null}
+              </div>
+            </IonModal>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -39,10 +63,21 @@ const Home: React.FC = () => {
           <IonToolbar>
             <IonTitle size="large">Home</IonTitle>
             <IonButtons collapse={true} slot="end" id="open-modal-home-title">
-              <IonButton><IonIcon icon={personOutline} /></IonButton>
-              <IonModal ref={modal} trigger="open-modal-home-title" initialBreakpoint={0.5} breakpoints={[0, 1]}>
-          <div className="block" style={{padding:'5px'}}>Block of Content</div>
-        </IonModal>
+              <IonButton>
+                <IonIcon icon={personOutline} />
+              </IonButton>
+              <IonModal
+                ref={modal}
+                trigger="open-modal-home-title"
+                initialBreakpoint={0.5}
+                breakpoints={[0, 1]}
+              >
+                <div className="block" style={{ padding: "5px" }}>
+                  {page === "" ? <Auth></Auth> : null}
+                  {page === "login" ? <EditProfile></EditProfile> : null}
+                  {page === "complete-profile" ? <Profile></Profile> : null}
+                </div>
+              </IonModal>
             </IonButtons>
           </IonToolbar>
         </IonHeader>

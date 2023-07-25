@@ -15,11 +15,15 @@ import {
 } from "@ionic/react";
 import Header from "../components/Header";
 import FloatingButton from "../components/FloatingButton";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { personOutline } from "ionicons/icons";
+import Auth from "./Auth";
+import EditProfile from "./EditProfile";
+import Profile from "./Profile";
 
 const Coupons: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
+  const [page, setPage] = useState("login");
   return (
     <IonPage>
       {/* <Header /> */}
@@ -36,7 +40,11 @@ const Coupons: React.FC = () => {
               initialBreakpoint={0.5}
               breakpoints={[0, 1]}
             >
-              <div className="block">Block of Content</div>
+              <div className="block">
+                {page === "" ? <Auth></Auth> : null}
+                {page === "login" ? <EditProfile></EditProfile> : null}
+                {page === "complete-profile" ? <Profile></Profile> : null}
+              </div>
             </IonModal>
           </IonButtons>
         </IonToolbar>
@@ -45,7 +53,11 @@ const Coupons: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Coupons</IonTitle>
-            <IonButtons collapse={true} slot="end" id="open-modal-coupons-title">
+            <IonButtons
+              collapse={true}
+              slot="end"
+              id="open-modal-coupons-title"
+            >
               <IonButton>
                 <IonIcon icon={personOutline} />
               </IonButton>
@@ -56,7 +68,9 @@ const Coupons: React.FC = () => {
                 breakpoints={[0, 1]}
               >
                 <div className="block" style={{ padding: "5px" }}>
-                  Block of Content
+                {page === "" ? <Auth></Auth> : null}
+                  {page === "login" ? <EditProfile></EditProfile> : null}
+                  {page === 'complete-profile' ? <Profile></Profile> : null}
                 </div>
               </IonModal>
             </IonButtons>
