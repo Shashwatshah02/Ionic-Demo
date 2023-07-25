@@ -7,7 +7,7 @@ const Community: React.FC = () => {
     <IonPage>
       {/* <Header /> */}
       <IonContent>Heyy from community
-      <FloatingButton></FloatingButton>
+      {/* <FloatingButton></FloatingButton> */}
       </IonContent>
     </IonPage>
   );

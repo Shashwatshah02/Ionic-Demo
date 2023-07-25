@@ -20,7 +20,7 @@ import { useRef } from "react";
 const FloatingButton: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
   return (
-    <IonFab slot="fixed" vertical="bottom" horizontal="end">
+    <IonFab slot="fixed" vertical="bottom" horizontal="end" style={{paddingBottom:"50px"}}>
       <IonFabButton id="open-modal">
         <IonIcon icon={add}></IonIcon>
       </IonFabButton>

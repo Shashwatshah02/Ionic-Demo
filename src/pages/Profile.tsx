@@ -8,7 +8,7 @@ const Profile: React.FC = () => {
       {/* <Header /> */}
 
       <IonContent className="ion-padding">
-        <FloatingButton></FloatingButton>
+        {/* <FloatingButton></FloatingButton> */}
         <div
           className="mx-auto"
           style={{
@@ -23,8 +23,8 @@ const Profile: React.FC = () => {
           }}
         >
           <IonAvatar style={{height:'100px', width:'100px'}}>
-            <img alt="Silhouette of a person's head" src={Placeholder} />
-          </IonAvatar>
+            <img alt="Silhouette of a person's head" src={Placeholder} style={{}}/>
+          </IonAvatar> 
           <h4>
             <strong>Your Name Here</strong>
           </h4>

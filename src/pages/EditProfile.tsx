@@ -16,7 +16,7 @@ const EditProfile: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="ion-padding">
-        <FloatingButton></FloatingButton>
+        {/* <FloatingButton></FloatingButton> */}
         <div
           className="mx-auto"
           style={{
@@ -31,11 +31,12 @@ const EditProfile: React.FC = () => {
           }}
         >
           <IonAvatar style={{height:'100px', width:'100px'}}>
-            {/* <input type="file"> */}
             <img alt="Silhouette of a person's head" src={Placeholder} />
-            {/* </input> */}
           </IonAvatar>
-          <div style={{ display: "flex" }}>
+            {/* <input type="file"
+        id="avatar" name="avatar"
+        accept="image/png, image/jpeg" style={{alignContent:'center'}}></input> */}
+          <div style={{ display: "flex", paddingTop:'20px' }}>
             {/* <IonList> */}
             <IonItem>
               <IonInput

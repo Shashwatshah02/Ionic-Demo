@@ -49,6 +49,7 @@ import Community from "./pages/Community";
 import Profile from "./pages/Profile";
 import { useRef } from "react";
 import EditProfile from "./pages/EditProfile";
+import FloatingButton from "./components/FloatingButton";
 
 setupIonicReact();
 
@@ -63,7 +64,7 @@ const App: React.FC = () => {
               <Auth />
             </Route>
             <Route exact path="/">
-              <Redirect to="/auth" />
+              <Redirect to="/home" />
             </Route>
             <Route exact path="/forgot-password">
               <ForgotPass />
@@ -76,7 +77,11 @@ const App: React.FC = () => {
               exact={true}
             />
             <Route path="/profile" render={() => <Profile />} exact={true} />
-            <Route path="/edit-profile" render={() => <EditProfile />} exact={true} />
+            <Route
+              path="/edit-profile"
+              render={() => <EditProfile />}
+              exact={true}
+            />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">
@@ -95,12 +100,13 @@ const App: React.FC = () => {
             </IonTabButton>
 
             <IonTabButton tab="Profile" href="/profile">
-                <IonIcon icon={personCircleOutline} />
+              <IonIcon icon={personCircleOutline} />
               {/* <IonLabel>Search</IonLabel> */}
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
+      <FloatingButton></FloatingButton>
     </IonApp>
   );
 };

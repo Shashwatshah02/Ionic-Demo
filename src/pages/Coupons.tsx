@@ -7,7 +7,7 @@ const Coupons: React.FC = () => {
     <IonPage>
       {/* <Header /> */}
       <IonContent>Heyy from coupons
-      <FloatingButton></FloatingButton>
+      {/* <FloatingButton></FloatingButton> */}
       </IonContent>
     </IonPage>
   );
