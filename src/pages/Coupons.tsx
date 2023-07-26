@@ -24,6 +24,8 @@ import Profile from "./Profile";
 const Coupons: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
   const [page, setPage] = useState("login");
+  const [isOpenHeader, setIsOpenHeader] = useState(false);
+  const [isOpenTitle, setIsOpenTitle] = useState(false);
   return (
     <IonPage>
       {/* <Header /> */}
@@ -31,47 +33,75 @@ const Coupons: React.FC = () => {
         <IonToolbar>
           <IonTitle>Coupons</IonTitle>
           <IonButtons collapse={true} slot="end">
-            <IonButton id="open-modal-coupons-header">
+            <IonButton
+              id="open-modal-coupons-header"
+              onClick={() => setIsOpenHeader(true)}
+            >
               <IonIcon icon={personOutline} />
             </IonButton>
             <IonModal
-              ref={modal}
+              className="auto-height"
               trigger="open-modal-coupons-header"
-              initialBreakpoint={0.5}
+              isOpen={isOpenHeader}
+              initialBreakpoint={0.85}
               breakpoints={[0, 1]}
             >
-              <div className="block">
-                {page === "" ? <Auth></Auth> : null}
-                {page === "login" ? <EditProfile></EditProfile> : null}
-                {page === "complete-profile" ? <Profile></Profile> : null}
-              </div>
+              <IonHeader>
+                <IonToolbar>
+                  <IonTitle>Modal</IonTitle>
+                  <IonButtons slot="end">
+                    <IonButton onClick={() => setIsOpenHeader(false)}>
+                      Close
+                    </IonButton>
+                  </IonButtons>
+                </IonToolbar>
+              </IonHeader>
+              <IonContent className="ion-padding" overflow-y="scroll">
+                <div className="block" style={{ padding: "5px" }}>
+                  {page === "" ? <Auth></Auth> : null}
+                  {page === "login" ? <EditProfile></EditProfile> : null}
+                  {page === "complete-profile" ? <Profile></Profile> : null}
+                </div>
+              </IonContent>
             </IonModal>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
-        <IonHeader collapse="condense">
+      <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Coupons</IonTitle>
-            <IonButtons
-              collapse={true}
-              slot="end"
-              id="open-modal-coupons-title"
-            >
-              <IonButton>
+            <IonButtons collapse={true} slot="end">
+              <IonButton
+                id="open-modal-coupons-title"
+                onClick={() => setIsOpenTitle(true)}
+              >
                 <IonIcon icon={personOutline} />
               </IonButton>
               <IonModal
-                ref={modal}
+                className="auto-height"
                 trigger="open-modal-coupons-title"
-                initialBreakpoint={0.5}
+                isOpen={isOpenTitle}
+                initialBreakpoint={0.85}
                 breakpoints={[0, 1]}
               >
-                <div className="block" style={{ padding: "5px" }}>
-                {page === "" ? <Auth></Auth> : null}
-                  {page === "login" ? <EditProfile></EditProfile> : null}
-                  {page === 'complete-profile' ? <Profile></Profile> : null}
-                </div>
+                <IonHeader>
+                  <IonToolbar>
+                    <IonTitle>Modal</IonTitle>
+                    <IonButtons slot="end">
+                      <IonButton onClick={() => setIsOpenTitle(false)}>
+                        Close
+                      </IonButton>
+                    </IonButtons>
+                  </IonToolbar>
+                </IonHeader>
+                <IonContent className="ion-padding" overflow-y="scroll">
+                  <div className="block" style={{ padding: "5px" }}>
+                    {page === "" ? <Auth></Auth> : null}
+                    {page === "login" ? <EditProfile></EditProfile> : null}
+                    {page === "complete-profile" ? <Profile></Profile> : null}
+                  </div>
+                </IonContent>
               </IonModal>
             </IonButtons>
           </IonToolbar>

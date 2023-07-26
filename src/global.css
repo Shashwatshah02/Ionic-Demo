@@ -1,0 +1,11 @@
+ion-modal ion-content::part(scroll) {
+    overflow-y: var(--overflow);
+    overscroll-behavior-y: contain;
+  }
+
+  ion-modal.auto-height::part(content) {
+    position: relative;
+    top: 80px;
+    bottom: 0px;
+    height: 80%;
+    }  

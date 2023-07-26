@@ -1,12 +1,19 @@
 import {
+  IonAvatar,
   IonButton,
   IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
   IonContent,
   IonFab,
   IonFabButton,
   IonHeader,
   IonIcon,
   IonItem,
+  IonLabel,
   IonList,
   IonModal,
   IonPage,
@@ -24,6 +31,8 @@ import Profile from "./Profile";
 const Community: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
   const [page, setPage] = useState("");
+  const [isOpenHeader, setIsOpenHeader] = useState(false);
+  const [isOpenTitle, setIsOpenTitle] = useState(false);
   return (
     <IonPage>
       {/* <Header /> */}
@@ -31,20 +40,36 @@ const Community: React.FC = () => {
         <IonToolbar>
           <IonTitle>Community</IonTitle>
           <IonButtons collapse={true} slot="end">
-            <IonButton id="open-modal-comm-header">
+            <IonButton
+              id="open-modal-community-header"
+              onClick={() => setIsOpenHeader(true)}
+            >
               <IonIcon icon={personOutline} />
             </IonButton>
             <IonModal
-              ref={modal}
-              trigger="open-modal-comm-header"
-              initialBreakpoint={0.5}
+              className="auto-height"
+              trigger="open-modal-community-header"
+              isOpen={isOpenHeader}
+              initialBreakpoint={0.8}
               breakpoints={[0, 1]}
             >
-              <div className="block">
-                {page === "" ? <Auth></Auth> : null}
-                {page === "login" ? <EditProfile></EditProfile> : null}
-                {page === "complete-profile" ? <Profile></Profile> : null}
-              </div>
+              <IonHeader>
+                <IonToolbar>
+                  <IonTitle>Modal</IonTitle>
+                  <IonButtons slot="end">
+                    <IonButton onClick={() => setIsOpenHeader(false)}>
+                      Close
+                    </IonButton>
+                  </IonButtons>
+                </IonToolbar>
+              </IonHeader>
+              <IonContent className="ion-padding" overflow-y="scroll">
+                <div className="block" style={{ padding: "5px" }}>
+                  {page === "" ? <Auth></Auth> : null}
+                  {page === "login" ? <EditProfile></EditProfile> : null}
+                  {page === "complete-profile" ? <Profile></Profile> : null}
+                </div>
+              </IonContent>
             </IonModal>
           </IonButtons>
         </IonToolbar>
@@ -53,25 +78,83 @@ const Community: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Community</IonTitle>
-            <IonButtons collapse={true} slot="end" id="open-modal-com-title">
-              <IonButton>
+            <IonButtons collapse={true} slot="end">
+              <IonButton
+                id="open-modal-community-title"
+                onClick={() => setIsOpenTitle(true)}
+              >
                 <IonIcon icon={personOutline} />
               </IonButton>
               <IonModal
-                ref={modal}
-                trigger="open-modal-com-title"
-                initialBreakpoint={0.5}
+                className="auto-height"
+                trigger="open-modal-community-title"
+                isOpen={isOpenTitle}
+                initialBreakpoint={0.8}
                 breakpoints={[0, 1]}
               >
-                <div className="block" style={{ padding: "5px" }}>
-                  {page === "" ? <Auth></Auth> : null}
-                  {page === "login" ? <EditProfile></EditProfile> : null}
-                  {page === "complete-profile" ? <Profile></Profile> : null}
-                </div>
+                <IonHeader>
+                  <IonToolbar>
+                    <IonTitle>Modal</IonTitle>
+                    <IonButtons slot="end">
+                      <IonButton onClick={() => setIsOpenTitle(false)}>
+                        Close
+                      </IonButton>
+                    </IonButtons>
+                  </IonToolbar>
+                </IonHeader>
+                <IonContent className="ion-padding" overflow-y="scroll">
+                  <div className="block" style={{ padding: "5px" }}>
+                    {page === "" ? <Auth></Auth> : null}
+                    {page === "login" ? <EditProfile></EditProfile> : null}
+                    {page === "complete-profile" ? <Profile></Profile> : null}
+                  </div>
+                </IonContent>
               </IonModal>
             </IonButtons>
           </IonToolbar>
         </IonHeader>
+        <div
+          className="mx-auto"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "20px",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "400px",
+            maxWidth: "100%",
+            margin: "auto",
+          }}
+        >
+          <IonCard>
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/card-media.png"
+            />
+            <IonCardHeader>
+              {/* <IonCardTitle>Card Title</IonCardTitle> */}
+              <IonItem>
+                <IonAvatar slot="start">
+                  <img
+                    alt="Silhouette of a person's head"
+                    src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  />
+                </IonAvatar>
+                <IonLabel>Shashwatshah02</IonLabel>
+              </IonItem>
+            </IonCardHeader>
+
+            <IonCardContent>
+              Here's a small text description for the card content. Nothing
+              more, nothing less. <br />
+              <br />
+              <IonCardSubtitle># Hashtags</IonCardSubtitle>
+              <div style={{ color: "blue" }}>
+                #Environment #Nature #SaveEarth #PlantTrees
+              </div>
+            </IonCardContent>
+          </IonCard>
+        </div>
       </IonContent>
     </IonPage>
   );

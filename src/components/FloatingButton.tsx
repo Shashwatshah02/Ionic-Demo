@@ -27,6 +27,7 @@ const FloatingButton: React.FC = () => {
       <IonModal ref={modal} trigger="open-modal">
         <IonHeader>
           <IonToolbar>
+            <IonTitle>Tweet</IonTitle>
             <IonButtons slot="start">
               <IonButton onClick={() => modal.current?.dismiss()}>
                 Cancel
