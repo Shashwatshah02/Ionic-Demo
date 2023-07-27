@@ -27,6 +27,7 @@ import { useRef, useState } from "react";
 import Auth from "./Auth";
 import EditProfile from "./EditProfile";
 import Profile from "./Profile";
+import CommunityCards from "../components/CommunityCards";
 
 const Community: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
@@ -126,34 +127,7 @@ const Community: React.FC = () => {
             margin: "auto",
           }}
         >
-          <IonCard>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-            />
-            <IonCardHeader>
-              {/* <IonCardTitle>Card Title</IonCardTitle> */}
-              <IonItem>
-                <IonAvatar slot="start">
-                  <img
-                    alt="Silhouette of a person's head"
-                    src="https://ionicframework.com/docs/img/demos/avatar.svg"
-                  />
-                </IonAvatar>
-                <IonLabel>Shashwatshah02</IonLabel>
-              </IonItem>
-            </IonCardHeader>
-
-            <IonCardContent>
-              Here's a small text description for the card content. Nothing
-              more, nothing less. <br />
-              <br />
-              <IonCardSubtitle># Hashtags</IonCardSubtitle>
-              <div style={{ color: "blue" }}>
-                #Environment #Nature #SaveEarth #PlantTrees
-              </div>
-            </IonCardContent>
-          </IonCard>
+          <CommunityCards />
         </div>
       </IonContent>
     </IonPage>

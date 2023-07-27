@@ -1,3 +1,4 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";    
 ion-modal ion-content::part(scroll) {
     overflow-y: var(--overflow);
     overscroll-behavior-y: contain;

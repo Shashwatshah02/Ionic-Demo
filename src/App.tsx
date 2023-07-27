@@ -50,6 +50,7 @@ import Profile from "./pages/Profile";
 import { useRef } from "react";
 import EditProfile from "./pages/EditProfile";
 import FloatingButton from "./components/FloatingButton";
+import ViewTweet from "./pages/ViewTweet";
 
 setupIonicReact();
 
@@ -71,6 +72,7 @@ const App: React.FC = () => {
             </Route>
             <Route path="/home" render={() => <Home />} exact={true} />
             <Route path="/coupons" render={() => <Coupons />} exact={true} />
+            <Route path="/view-tweet" render={() => <ViewTweet />} exact={true} />
             <Route
               path="/community-forum"
               render={() => <Community />}
