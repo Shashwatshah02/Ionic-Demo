@@ -1,6 +1,11 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+#container {
+  columns: 2;
+  column-gap: 10px;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

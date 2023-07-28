@@ -18,7 +18,6 @@ import {
 import { arrowBack, imageOutline, imageSharp } from "ionicons/icons";
 import { useState } from "react";
 import ImageGallery from "react-image-gallery";
-// import "../global.css";
 
 const ViewTweet: React.FC = () => {
   const images = [

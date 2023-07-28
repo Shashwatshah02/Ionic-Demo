@@ -1,0 +1,4 @@
+#container-coupons {
+    columns: 2;
+    column-gap: 10px;
+}

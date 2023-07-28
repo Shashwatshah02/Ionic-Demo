@@ -13,6 +13,7 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Auth from "./pages/Auth";
+import './global.css'
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -55,6 +56,13 @@ import ViewTweet from "./pages/ViewTweet";
 setupIonicReact();
 
 const App: React.FC = () => {
+  window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+      // Hide the address bar!
+      window.scrollTo(0, 1);
+    }, 0);
+  });
   const modal = useRef<HTMLIonModalElement>(null);
   return (
     <IonApp>
