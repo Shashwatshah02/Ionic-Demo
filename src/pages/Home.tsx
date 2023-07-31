@@ -88,6 +88,7 @@ const Home: React.FC = () => {
               >
                 <IonIcon icon={personOutline} />
               </IonButton>
+              {/* <Modal title = 'Shashwat' mode={isOpenTitle} handleClick = {() => setIsOpenTitle(false)}/> */}
               <IonModal
                 className="auto-height"
                 trigger="open-modal-home-title"

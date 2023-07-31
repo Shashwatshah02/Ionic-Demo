@@ -17,12 +17,13 @@ import {
   IonList,
   IonModal,
   IonPage,
+  IonSearchbar,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import Header from "../components/Header";
 import FloatingButton from "../components/FloatingButton";
-import { personOutline } from "ionicons/icons";
+import { filter, personOutline } from "ionicons/icons";
 import { useRef, useState } from "react";
 import Auth from "./Auth";
 import EditProfile from "./EditProfile";
@@ -114,6 +115,7 @@ const Community: React.FC = () => {
             </IonButtons>
           </IonToolbar>
         </IonHeader>
+        
         <div
           className="mx-auto"
           style={{
@@ -126,6 +128,22 @@ const Community: React.FC = () => {
             margin: "auto",
           }}
         >
+          <div
+            style={{
+              width: "400px",
+              maxWidth: "100%",
+              display: "flex",
+              padding: "0 5px 0 0 ",
+            }}
+          >
+            <IonSearchbar></IonSearchbar>
+            <IonButtons slot="primary">
+              <IonButton fill="outline" id="open-modal-filter">
+                filter
+                <IonIcon slot="end" icon={filter}></IonIcon>
+              </IonButton>
+            </IonButtons>
+          </div>
           <CommunityCards />
         </div>
       </IonContent>

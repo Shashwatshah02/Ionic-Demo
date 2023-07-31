@@ -20,7 +20,7 @@ import { useRef } from "react";
 import ViewTweet from "../pages/ViewTweet";
 
 const CommunityCards: React.FC = () => {
-    const modal = useRef<HTMLIonModalElement>(null);
+  const modal = useRef<HTMLIonModalElement>(null);
 
   function dismiss() {
     modal.current?.dismiss();
@@ -51,33 +51,36 @@ const CommunityCards: React.FC = () => {
   //   return enterAnimation(baseEl).direction('reverse');
   // };
   return (
-    <><a href="/view-tweet" style={{textDecoration:'none'}}>
-          <IonCard>
-              <img
-                  alt="Silhouette of mountains"
-                  src="https://ionicframework.com/docs/img/demos/card-media.png" />
-              <IonCardHeader>
-                  {/* <IonCardTitle>Card Title</IonCardTitle> */}
-              </IonCardHeader>
+    <>
+      <a href="/view-tweet" style={{ textDecoration: "none" }}>
+        <IonCard>
+          <img
+            alt="Silhouette of mountains"
+            src="https://ionicframework.com/docs/img/demos/card-media.png"
+          />
+          <IonCardHeader>
+            {/* <IonCardTitle>Card Title</IonCardTitle> */}
+          </IonCardHeader>
 
-              <IonCardContent>
-                  Here's a small text description for the card content. Nothing more,
-                  nothing less. <br />
-                  <br />
-                  <IonCardSubtitle># Hashtags</IonCardSubtitle>
-                  <div style={{ color: "blue" }}>
-                      #Environment #Nature #SaveEarth #PlantTrees
-                  </div>
-              </IonCardContent>
-              <IonItem>
-                  <IonAvatar slot="start">
-                      <img
-                          alt="Silhouette of a person's head"
-                          src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-                  </IonAvatar>
-                  <IonLabel>Shashwatshah02</IonLabel>
-              </IonItem>
-          </IonCard>
+          <IonCardContent>
+            Here's a small text description for the card content. Nothing more,
+            nothing less. <br />
+            <br />
+            <IonCardSubtitle># Hashtags</IonCardSubtitle>
+            <div style={{ color: "blue" }}>
+              #Environment #Nature #SaveEarth #PlantTrees
+            </div>
+          </IonCardContent>
+          <IonItem>
+            <IonAvatar slot="start">
+              <img
+                alt="Silhouette of a person's head"
+                src="https://ionicframework.com/docs/img/demos/avatar.svg"
+              />
+            </IonAvatar>
+            <IonLabel>Shashwatshah02</IonLabel>
+          </IonItem>
+        </IonCard>
       </a>
       {/* <IonModal
           id="example-modal"
@@ -96,7 +99,7 @@ const CommunityCards: React.FC = () => {
                   <ViewTweet />
               </IonContent>
           </IonModal>*/}
-          </> 
+    </>
   );
 };
 export default CommunityCards;
