@@ -56,13 +56,6 @@ import ViewTweet from "./pages/ViewTweet";
 setupIonicReact();
 
 const App: React.FC = () => {
-  window.addEventListener("load",function() {
-    // Set a timeout...
-    setTimeout(function(){
-      // Hide the address bar!
-      window.scrollTo(0, 1);
-    }, 0);
-  });
   const modal = useRef<HTMLIonModalElement>(null);
   return (
     <IonApp>

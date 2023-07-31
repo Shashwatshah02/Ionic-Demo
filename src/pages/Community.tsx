@@ -119,7 +119,6 @@ const Community: React.FC = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            paddingTop: "20px",
             flexDirection: "column",
             alignItems: "center",
             width: "400px",

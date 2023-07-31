@@ -20,6 +20,7 @@ import { useRef, useState } from "react";
 import Auth from "./Auth";
 import Profile from "./Profile";
 import EditProfile from "./EditProfile";
+import Modal from "../components/Modal";
 
 const Home: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
@@ -52,8 +53,8 @@ const Home: React.FC = () => {
               className="auto-height"
               trigger="open-modal-home-header"
               isOpen={isOpenHeader}
-              initialBreakpoint={0.8}
-              breakpoints={[0, 1]}
+              initialBreakpoint={1}
+              breakpoints={[0, 0.8]}
             >
               <IonHeader>
                 <IonToolbar>
@@ -91,8 +92,8 @@ const Home: React.FC = () => {
                 className="auto-height"
                 trigger="open-modal-home-title"
                 isOpen={isOpenTitle}
-                initialBreakpoint={0.8}
-                breakpoints={[0, 1]}
+                initialBreakpoint={1}
+                breakpoints={[0, 0.8]}
               >
                 <IonHeader>
                   <IonToolbar>
