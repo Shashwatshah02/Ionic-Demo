@@ -108,7 +108,7 @@ const Coupons: React.FC = () => {
     filteredData = products.filter((product) =>
       product.type.toLowerCase().includes(filters)
     );
-  }, [setFilters]);
+  }, []);
 
   return (
     <IonPage>
