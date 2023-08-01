@@ -108,7 +108,7 @@ const Coupons: React.FC = () => {
     filteredData = products.filter((product) =>
       product.type.toLowerCase().includes(filters)
     );
-  }, [filters]);
+  }, [setFilters]);
 
   return (
     <IonPage>
@@ -281,6 +281,7 @@ const Coupons: React.FC = () => {
           <Masonry columnsCount={2}>
             {filteredData.map((product) => {
               return (
+                <a href="/view-coupon" style={{ textDecoration: "none" }}>
                 <IonCard className="ion-no-margin" style={{ margin: "5px" }}>
                   <img alt={product.alt} src={product.img} />
 
@@ -290,6 +291,7 @@ const Coupons: React.FC = () => {
                     </p>
                   </IonCardContent>
                 </IonCard>
+                </a>
               );
             })}
           </Masonry>
