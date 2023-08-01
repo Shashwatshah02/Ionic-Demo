@@ -25,7 +25,7 @@ import {
 } from "@ionic/react";
 import Header from "../components/Header";
 import FloatingButton from "../components/FloatingButton";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { filter, personOutline } from "ionicons/icons";
 import Auth from "./Auth";
 import EditProfile from "./EditProfile";
@@ -103,6 +103,12 @@ const Coupons: React.FC = () => {
   let filteredData = products.filter((product) =>
     product.title.toLowerCase().includes(search)
   );
+
+  useEffect(() => {
+    filteredData = products.filter((product) =>
+      product.type.toLowerCase().includes(filters)
+    );
+  }, [filters]);
 
   return (
     <IonPage>
@@ -220,7 +226,7 @@ const Coupons: React.FC = () => {
               className="auto-height"
               trigger="open-modal-filter"
               isOpen={isOpenFilter}
-              initialBreakpoint={1}
+              initialBreakpoint={0.4}
               breakpoints={[0, 0.8]}
             >
               <IonHeader>
@@ -240,7 +246,7 @@ const Coupons: React.FC = () => {
                       fill="clear"
                       color={"light"}
                       onClick={() => {
-                        setFilters("All");
+                        setFilters("all");
                       }}
                     >
                       All
@@ -250,11 +256,8 @@ const Coupons: React.FC = () => {
                     <IonButton
                       fill="clear"
                       color={"light"}
-                      onClick={(e) => {
+                      onClick={() => {
                         setFilters("env");
-                        filteredData = products.filter((product) =>
-                          product.type.toLowerCase().includes(filters)
-                        );
                       }}
                     >
                       Environment
@@ -264,7 +267,7 @@ const Coupons: React.FC = () => {
                     <IonButton
                       fill="clear"
                       color={"light"}
-                      onClick={(e) => {
+                      onClick={() => {
                         setFilters("nat");
                       }}
                     >
