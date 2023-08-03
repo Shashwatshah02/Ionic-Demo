@@ -49,7 +49,7 @@ const ViewTweet: React.FC = () => {
           <IonButton fill="clear" onClick={() => history.back()} slot="start">
             <IonIcon slot="icon-only" icon={arrowBack} />
           </IonButton>
-          <IonTitle>View Tweet</IonTitle>
+          <IonTitle>View</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">

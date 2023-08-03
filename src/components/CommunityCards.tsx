@@ -6,7 +6,9 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
+  IonChip,
   IonContent,
+  IonHeader,
   IonImg,
   IonItem,
   IonLabel,
@@ -16,11 +18,14 @@ import {
   IonToolbar,
   createAnimation,
 } from "@ionic/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import mountains from "../images/mountains.jpg";
 import ViewTweet from "../pages/ViewTweet";
+import Placeholder from "../images/Placeholder.jpg";
 
 const CommunityCards: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
+  const [isOpenProfile, setIsOpenProfile] = useState(false);
 
   function dismiss() {
     modal.current?.dismiss();
@@ -52,26 +57,20 @@ const CommunityCards: React.FC = () => {
   // };
   return (
     <>
-      <a href="/view-tweet" style={{ textDecoration: "none" }}>
-        <IonCard>
-          <img
-            alt="Silhouette of mountains"
-            src="https://ionicframework.com/docs/img/demos/card-media.png"
-          />
-          <IonCardHeader>
-            {/* <IonCardTitle>Card Title</IonCardTitle> */}
-          </IonCardHeader>
+      <IonCard className="ion-no-margin">
+        <a href="/view-tweet" style={{ textDecoration: "none" }}>
+          <img id="refactor" alt="Silhouette of mountains" src={mountains} />
+        </a>
 
-          <IonCardContent>
+        <IonCardContent>
+          <a href="/view-tweet" style={{ textDecoration: "none", color:'black'}}>
             Here's a small text description for the card content. Nothing more,
             nothing less. <br />
-            <br />
-            <IonCardSubtitle># Hashtags</IonCardSubtitle>
+          </a>
             <div style={{ color: "blue" }}>
               #Environment #Nature #SaveEarth #PlantTrees
             </div>
-          </IonCardContent>
-          <IonItem>
+          <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)}>
             <IonAvatar slot="start">
               <img
                 alt="Silhouette of a person's head"
@@ -80,8 +79,120 @@ const CommunityCards: React.FC = () => {
             </IonAvatar>
             <IonLabel>Shashwatshah02</IonLabel>
           </IonItem>
+          <IonModal
+            className="auto-height"
+            trigger="open-modal"
+            isOpen={isOpenProfile}
+            initialBreakpoint={1}
+            breakpoints={[0, 1]}
+          >
+            <IonHeader>
+              <IonToolbar>
+                <IonTitle>Modal</IonTitle>
+                <IonButtons slot="end">
+                    <IonButton onClick={() => setIsOpenProfile(false)}>
+                      Close
+                    </IonButton>
+                  </IonButtons>
+              </IonToolbar>
+            </IonHeader>
+            <IonContent
+              className="ion-padding"
+              overflow-y="scroll"
+            >
+              User Profile here
+            </IonContent>
+          </IonModal>
+        </IonCardContent>
+      </IonCard>
+        <IonCard className='ion-no-margin ion-margin-top'>
+          {/* <img id="refactor" alt="Silhouette of mountains" src={} /> */}
+
+          <IonCardContent>
+      <a href="/view-tweet" style={{ textDecoration: "none", color:'black' }}>
+            Here's a small text description for the card content. Nothing more,
+            nothing less. <br />
+            <div style={{ color: "blue" }}>
+              #Environment #Nature #SaveEarth #PlantTrees
+            </div>
+                </a>
+                <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)}>
+            <IonAvatar slot="start">
+              <img
+                alt="Silhouette of a person's head"
+                src="https://ionicframework.com/docs/img/demos/avatar.svg"
+              />
+            </IonAvatar>
+            <IonLabel>Shashwatshah02</IonLabel>
+          </IonItem>
+          <IonModal
+            className="auto-height"
+            trigger="open-modal"
+            isOpen={isOpenProfile}
+            initialBreakpoint={1}
+            breakpoints={[0, 1]}
+          >
+            <IonHeader>
+              <IonToolbar>
+                <IonTitle>Modal</IonTitle>
+                <IonButtons slot="end">
+                    <IonButton onClick={() => setIsOpenProfile(false)}>
+                      Close
+                    </IonButton>
+                  </IonButtons>
+              </IonToolbar>
+            </IonHeader>
+            <IonContent
+              className="ion-padding"
+              overflow-y="scroll"
+            >
+              <div
+          className="mx-auto"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "20px",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "400px",
+            maxWidth: "100%",
+            margin: "auto",
+          }}
+        >
+          <IonAvatar style={{height:'100px', width:'100px'}}>
+            <img alt="Silhouette of a person's head" src={Placeholder} style={{}}/>
+          </IonAvatar> 
+          <h4>
+            <strong>Your Name Here</strong>
+          </h4>
+          <div style={{ paddingBottom: "30px" }}>City, Country</div>
+          <div style={{ textAlign: "center" }}>
+            <IonChip>Default</IonChip>
+            <IonChip color="primary">Primary</IonChip>
+            <IonChip color="secondary">Secondary</IonChip>
+            <IonChip color="medium">Me</IonChip>
+            <IonChip color="tertiary">Tertiary</IonChip>
+            <IonChip color="success">Success</IonChip>
+            <IonChip color="warning">Warning</IonChip>
+            <IonChip color="danger">Danger</IonChip>
+            <IonChip color="medium">Medium</IonChip>
+          </div>
+          <div style={{ textAlign: "left", paddingTop: "30px", paddingBottom:'10px' }}>
+            <h6>
+              <strong>About yourself</strong>
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              necessitatibus earum libero corrupti minima voluptas quo?
+              Aspernatur voluptatum, aut perspiciatis quo aperiam fugiat placeat
+              porro officia est labore ratione. Libero.
+            </p>
+          </div>
+          </div>
+            </IonContent>
+          </IonModal>
+          </IonCardContent>
         </IonCard>
-      </a>
       {/* <IonModal
           id="example-modal"
           ref={modal}

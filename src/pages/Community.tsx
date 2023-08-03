@@ -29,6 +29,7 @@ import Auth from "./Auth";
 import EditProfile from "./EditProfile";
 import Profile from "./Profile";
 import CommunityCards from "../components/CommunityCards";
+import "../theme/variables.css"
 
 const Community: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
@@ -41,7 +42,7 @@ const Community: React.FC = () => {
       <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Community</IonTitle>
-          <IonButtons collapse={true} slot="end">
+          {/* <IonButtons collapse={true} slot="end">
             <IonButton
               id="open-modal-community-header"
               onClick={() => setIsOpenHeader(true)}
@@ -73,14 +74,14 @@ const Community: React.FC = () => {
                 </div>
               </IonContent>
             </IonModal>
-          </IonButtons>
+          </IonButtons> */}
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Community</IonTitle>
-            <IonButtons collapse={true} slot="end">
+            <IonTitle size="large" className="ion-no-padding ion-padding-horizontal">Community</IonTitle>
+            {/* <IonButtons collapse={true} slot="end">
               <IonButton
                 id="open-modal-community-title"
                 onClick={() => setIsOpenTitle(true)}
@@ -112,7 +113,7 @@ const Community: React.FC = () => {
                   </div>
                 </IonContent>
               </IonModal>
-            </IonButtons>
+            </IonButtons> */}
           </IonToolbar>
         </IonHeader>
         
@@ -138,13 +139,21 @@ const Community: React.FC = () => {
           >
             <IonSearchbar></IonSearchbar>
             <IonButtons slot="primary">
-              <IonButton fill="outline" id="open-modal-filter">
-                filter
-                <IonIcon slot="end" icon={filter}></IonIcon>
+              <IonButton fill="outline" >
+              <IonIcon icon={filter}></IonIcon>
               </IonButton>
             </IonButtons>
           </div>
+          <div
+            style={{
+              width: "400px",
+              maxWidth: "100%",
+              padding: "0 10px 0 10px ",
+            }}
+          >
           <CommunityCards />
+          
+      </div>
         </div>
       </IonContent>
     </IonPage>

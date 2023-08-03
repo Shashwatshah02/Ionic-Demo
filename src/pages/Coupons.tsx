@@ -313,8 +313,7 @@ const Coupons: React.FC = () => {
                 id="open-modal-filter"
                 onClick={() => setIsOpenFilter(true)}
               >
-                filter
-                <IonIcon slot="end" icon={filter}></IonIcon>
+                <IonIcon icon={filter}></IonIcon>
               </IonButton>
             </IonButtons>
             <IonModal
@@ -413,7 +412,7 @@ const Coupons: React.FC = () => {
             width: "400px",
             maxWidth: "100%",
             margin: "auto",
-            padding:'10px'
+            padding: "10px",
           }}
         >
           <IonButton expand="block">
