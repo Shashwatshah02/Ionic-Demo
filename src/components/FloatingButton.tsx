@@ -1,6 +1,7 @@
 import {
   IonButton,
   IonButtons,
+  IonCardTitle,
   IonContent,
   IonFab,
   IonFabButton,
@@ -8,6 +9,7 @@ import {
   IonIcon,
   IonInput,
   IonItem,
+  IonLabel,
   IonList,
   IonModal,
   IonSelect,
@@ -23,16 +25,17 @@ import { Form } from "react-bootstrap";
 const FloatingButton: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
   return (
+    <>
     <IonFab
       slot="fixed"
       vertical="bottom"
       horizontal="end"
-      style={{ marginBottom: "50px" }}
+      // style={{ marginBottom: "50px" }}
     >
-      <IonFabButton id="open-modal">
+      <IonFabButton id="open-modal-floating-button">
         <IonIcon icon={add}></IonIcon>
       </IonFabButton>
-      <IonModal ref={modal} trigger="open-modal">
+      <IonModal ref={modal} trigger="open-modal-floating-button">
         <IonHeader>
           <IonToolbar>
             <IonTitle></IonTitle>
@@ -59,23 +62,19 @@ const FloatingButton: React.FC = () => {
                 placeholder="Enter your title here"
               ></IonInput>
             </IonItem> */}
-            <IonItem>
-              <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Upload Image</Form.Label>
-                <Form.Control type="file" />
-              </Form.Group>
-            </IonItem>
+            
             <IonTextarea
               className="ion-margin-start ion-padding-end"
               label="Title"
               labelPlacement="floating"
               counter={true}
-              maxlength={200}
+              maxlength={400}
               counterFormatter={(inputLength, maxLength) =>
                 `${maxLength - inputLength} characters remaining`
               }
             ></IonTextarea>
 
+                <IonLabel className="ion-padding-start">Select a Category</IonLabel>
               <IonItem>
                 <IonSelect
                   aria-label="Category"
@@ -87,11 +86,17 @@ const FloatingButton: React.FC = () => {
                   <IonSelectOption value="bananas">Bananas</IonSelectOption>
                 </IonSelect>
               </IonItem>
-
+              <IonItem className="ion-margin-top">
+              <Form.Group controlId="formFile" className="mb-3">
+                <Form.Label>Upload Image</Form.Label>
+                <Form.Control type="file" />
+              </Form.Group>
+            </IonItem>
           </IonList>
         </IonContent>
       </IonModal>
     </IonFab>
+    </>
   );
 };
 export default FloatingButton;

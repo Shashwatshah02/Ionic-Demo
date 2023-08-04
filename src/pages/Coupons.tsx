@@ -52,7 +52,7 @@ const Coupons: React.FC = () => {
     {
       id: 1,
       type: "environment",
-      title: "Our savior.",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1595875197145-a0d6828b58e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       alt: "Silhoutte of Mountains",
@@ -61,7 +61,7 @@ const Coupons: React.FC = () => {
     {
       id: 3,
       type: "water",
-      title: "Closer to nature.",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1533577254044-3c2b4b31183c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       alt: "Silhoutte of Mountains",
@@ -69,7 +69,7 @@ const Coupons: React.FC = () => {
     {
       id: 4,
       type: "environment",
-      title: "Protect and preserve",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1614028901211-995c6c474d53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
       alt: "Silhoutte of Mountains",
@@ -77,7 +77,7 @@ const Coupons: React.FC = () => {
     {
       id: 5,
       type: "water",
-      title: "Nature is the nurturer.",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1560787139-bcec5864f0a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
       alt: "Silhoutte of Mountains",
@@ -85,7 +85,7 @@ const Coupons: React.FC = () => {
     {
       id: 6,
       type: "environment",
-      title: "Feel it close to you.",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1533577254044-3c2b4b31183c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       alt: "Silhoutte of Mountains",
@@ -93,7 +93,7 @@ const Coupons: React.FC = () => {
     {
       id: 2,
       type: "environment",
-      title: "Know nature closely.",
+      title: "Get 15% off + 🌳",
       description: "15% for you and 15% for 🌳",
       img: "https://images.unsplash.com/photo-1595875197145-a0d6828b58e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       alt: "Silhoutte of Mountains",
@@ -121,7 +121,7 @@ const Coupons: React.FC = () => {
       <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Save $ & the 🌎</IonTitle>
-          <IonButtons collapse={true} slot="end">
+          {/* <IonButtons collapse={true} slot="end">
             <IonButton
               id="open-modal-coupons-header"
               onClick={() => setIsOpenHeader(true)}
@@ -153,7 +153,7 @@ const Coupons: React.FC = () => {
                 </div>
               </IonContent>
             </IonModal>
-          </IonButtons>
+          </IonButtons> */}
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
@@ -165,7 +165,7 @@ const Coupons: React.FC = () => {
             >
               Save $ & the 🌎
             </IonTitle>
-            <IonButtons collapse={true} slot="end">
+            {/* <IonButtons collapse={true} slot="end">
               <IonButton
                 id="open-modal-coupons-title"
                 onClick={() => setIsOpenTitle(true)}
@@ -197,7 +197,7 @@ const Coupons: React.FC = () => {
                   </div>
                 </IonContent>
               </IonModal>
-            </IonButtons>
+            </IonButtons> */}
           </IonToolbar>
         </IonHeader>
         <div
@@ -209,75 +209,80 @@ const Coupons: React.FC = () => {
           }}
         >
           <IonAccordionGroup className="ion-padding-bottom">
-            <IonAccordion value="first">
+            <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px'}}>
               <IonItem slot="header" color="dark">
                 <IonLabel>How it works</IonLabel>
               </IonItem>
-              <div
-                style={{ padding: "0 20px" }}
-                className="ion-padding"
-                slot="content"
-              >
-                <br />
-                <div style={{ padding: "5px 0", display: "flex" }}>
-                  <img
-                    src={one}
-                    alt=""
-                    height={30}
-                    style={{ padding: "0 15px 0 0" }}
-                  />
-                  <div style={{ margin: "auto 0" }}>
-                    Use our coupon on the brand’s website
+              
+                <div
+                  style={{ padding: "0 20px",backgroundColor: '#F4F5F8' }}
+                  className="ion-padding"
+                  slot="content"
+                >
+                  <br />
+                  <div style={{ padding: "5px 0", display: "flex"}}>
+                    <img
+                      src={one}
+                      alt=""
+                      height={30}
+                      style={{ padding: "0 15px 0 0" }}
+                    />
+                    <div style={{ margin: "auto 0" }}>
+                      Use our coupon on the brand’s website
+                    </div>
                   </div>
-                </div>
-                <div style={{ padding: "5px 0", display: "flex" }}>
-                  <img
-                    src={two}
-                    alt=""
-                    height={30}
-                    style={{ padding: "0 15px 0 0" }}
-                  />
-                  <div style={{ margin: "auto 0" }}>Get upfront discounts</div>
-                </div>
-                <div style={{ padding: "5px 0", display: "flex" }}>
-                  <img
-                    src={three}
-                    alt=""
-                    height={30}
-                    style={{ padding: "0 15px 0 0" }}
-                  />
-                  <div style={{ margin: "auto 0" }}>
-                    We’ll plant 🌳 with our entire affiliate fee
+                  <div style={{ padding: "5px 0", display: "flex",backgroundColor: '#F4F5F8' }}>
+                    <img
+                      src={two}
+                      alt=""
+                      height={30}
+                      style={{ padding: "0 15px 0 0" }}
+                    />
+                    <div style={{ margin: "auto 0",backgroundColor: '#F4F5F8' }}>
+                      Get upfront discounts
+                    </div>
                   </div>
+                  <div style={{ padding: "5px 0", display: "flex",backgroundColor: '#F4F5F8' }}>
+                    <img
+                      src={three}
+                      alt=""
+                      height={30}
+                      style={{ padding: "0 15px 0 0" }}
+                    />
+                    <div style={{ margin: "auto 0" }}>
+                      We’ll plant 🌳 with our entire affiliate fee
+                    </div>
+                  </div>
+                  <br />
+                  <p style={{backgroundColor: '#F4F5F8'}}>
+                    EarthTag is an affiliate network that lists coupons from
+                    conscious brands on its website. When you use a coupon, you
+                    receive an upfront discount, and EarthTag earns a referral
+                    fee. 100% of our affiliate fee goes towards planting 🌳. We
+                    keep absolutely nothing, and to demonstrate our
+                    authenticity, we have made our ledger public. On our
+                    website, you can track all the orders, the amount of
+                    affiliate fee it generated and the 🌳 planted. By using
+                    EarthTag&apos;s coupons, you save money, support conscious
+                    brands, and support our environment.
+                  </p>
+                  <h5>
+                    <strong>100% to 🌳 with 100% transparency</strong>
+                  </h5>
+                  <p>
+                    When you use our coupon you get an upfront discount. 30-45
+                    days after your order the brand gives us an affiliate fee,
+                    provided you do not cancel or return the order. We donate
+                    our entire share to our 🌳 planting NGOs. All the details
+                    Including tree planting photos, location and other details
+                    are shared with you on and also displayed here.
+                  </p>
+                  We started on <strong> June 18 2023 </strong>and since then we
+                  have received <strong> 0 </strong> orders, earned INR{" "}
+                  <strong>0</strong> affiliate fee, planted <strong>0</strong>
+                  🌳s.
                 </div>
-                <br />
-                <p>
-                  EarthTag is an affiliate network that lists coupons from
-                  conscious brands on its website. When you use a coupon, you
-                  receive an upfront discount, and EarthTag earns a referral
-                  fee. 100% of our affiliate fee goes towards planting 🌳. We
-                  keep absolutely nothing, and to demonstrate our authenticity,
-                  we have made our ledger public. On our website, you can track
-                  all the orders, the amount of affiliate fee it generated and
-                  the 🌳 planted. By using EarthTag&apos;s coupons, you save
-                  money, support conscious brands, and support our environment.
-                </p>
-                <h5>
-                  <strong>100% to 🌳 with 100% transparency</strong>
-                </h5>
-                <p>
-                  When you use our coupon you get an upfront discount. 30-45
-                  days after your order the brand gives us an affiliate fee,
-                  provided you do not cancel or return the order. We donate our
-                  entire share to our 🌳 planting NGOs. All the details
-                  Including tree planting photos, location and other details are
-                  shared with you on and also displayed here.
-                </p>
-                We started on <strong> June 18 2023 </strong>and since then we
-                have received <strong> 0 </strong> orders, earned INR{" "}
-                <strong>0</strong> affiliate fee, planted <strong>0</strong>
-                🌳s.
-              </div>
+              
             </IonAccordion>
           </IonAccordionGroup>
         </div>
@@ -292,7 +297,7 @@ const Coupons: React.FC = () => {
             width: "400px",
             maxWidth: "100%",
             margin: "auto",
-            padding: "15px 10px 0 10px",
+            padding: "0 10px 0 10px",
           }}
         >
           <div
@@ -305,8 +310,9 @@ const Coupons: React.FC = () => {
           >
             <IonSearchbar
               onIonInput={(ev) => handleInput(ev)}
-              className="ion-no-padding ion-padding-end"
+              className="ion-no-padding"
             ></IonSearchbar>
+            <div>&nbsp;</div>
             <IonButtons slot="primary">
               <IonButton
                 fill="outline"
@@ -415,10 +421,16 @@ const Coupons: React.FC = () => {
             padding: "10px",
           }}
         >
-          <IonButton expand="block">
+          <IonButton className="ion-margin-bottom" expand="block">
             <IonIcon slot="start" icon={bulb}></IonIcon>
             Contribute with your time
           </IonButton>
+          <a href="mailto:romil@earthtag.ooo?subject=Ideas">
+            <IonButton expand="block">
+              {/* <IonIcon slot="start" icon={bulb}></IonIcon> */}
+              List your brand or service here
+            </IonButton>
+          </a>
         </div>
       </IonContent>
     </IonPage>

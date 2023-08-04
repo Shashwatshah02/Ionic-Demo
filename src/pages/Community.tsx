@@ -39,6 +39,7 @@ const Community: React.FC = () => {
   return (
     <IonPage>
       {/* <Header /> */}
+      <FloatingButton></FloatingButton>
       <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Community</IonTitle>
@@ -134,10 +135,13 @@ const Community: React.FC = () => {
               width: "400px",
               maxWidth: "100%",
               display: "flex",
-              padding: "0 5px 0 0 ",
+              padding: "0 8px 0 10px ",
             }}
           >
-            <IonSearchbar></IonSearchbar>
+            <IonSearchbar className="ion-no-padding"></IonSearchbar>
+            <div>
+               &nbsp;
+            </div>
             <IonButtons slot="primary">
               <IonButton fill="outline" >
               <IonIcon icon={filter}></IonIcon>

@@ -20,7 +20,7 @@ const ViewCoupon: React.FC = () => {
           <IonButton fill="clear" onClick={() => history.back()} slot="start">
             <IonIcon slot="icon-only" icon={arrowBack} />
           </IonButton>
-          <IonTitle>View Coupon</IonTitle>
+          <IonTitle></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
@@ -36,6 +36,9 @@ const ViewCoupon: React.FC = () => {
             alt="Silhouette of mountains"
             src="https://ionicframework.com/docs/img/demos/card-media.png"
           />
+          <div style={{textAlign:'center'}}>
+            <h5><strong>15% for you and 15% for 🌳s</strong></h5>
+          </div>
         <IonList className="ion-padding-end">
           <IonItem>
             <IonInput

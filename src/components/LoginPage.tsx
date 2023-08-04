@@ -17,7 +17,7 @@ import ForgotPass from "./ForgotPass";
 const LoginPage: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
   return (
-    <IonContent>
+    <>
       <IonList className="ion-padding-end">
         <IonItem>
           <IonInput
@@ -44,7 +44,7 @@ const LoginPage: React.FC = () => {
       <IonButton fill="clear" expand="block" href="/forgot-password">
         Forgot password ?
       </IonButton>
-    </IonContent>
+    </>
   );
 };
 export default LoginPage;

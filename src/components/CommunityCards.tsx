@@ -67,10 +67,10 @@ const CommunityCards: React.FC = () => {
             Here's a small text description for the card content. Nothing more,
             nothing less. <br />
           </a>
-            <div style={{ color: "blue" }}>
+            <div style={{ color: "blue", paddingBottom:'8px' }}>
               #Environment #Nature #SaveEarth #PlantTrees
             </div>
-          <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)}>
+          <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)} lines="none">
             <IonAvatar slot="start">
               <img
                 alt="Silhouette of a person's head"
@@ -112,11 +112,11 @@ const CommunityCards: React.FC = () => {
       <a href="/view-tweet" style={{ textDecoration: "none", color:'black' }}>
             Here's a small text description for the card content. Nothing more,
             nothing less. <br />
-            <div style={{ color: "blue" }}>
+            <div style={{ color: "blue", paddingBottom:'8px' }}>
               #Environment #Nature #SaveEarth #PlantTrees
             </div>
                 </a>
-                <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)}>
+                <IonItem className="ion-no-padding" id="open-modal" onClick={() => setIsOpenProfile(true)} lines="none">
             <IonAvatar slot="start">
               <img
                 alt="Silhouette of a person's head"

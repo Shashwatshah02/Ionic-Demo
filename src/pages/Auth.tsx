@@ -27,10 +27,10 @@ const Auth: React.FC = () => {
   }
   return (
     <>
-      <IonPage>
+      
         {/* <Header /> */}
-        <IonContent className="ion-padding mx-auto no-scroll" fullscreen>
-        <div style={{width:'400px', maxWidth:'100%', height:'100vh', margin:'auto'}}>
+        {/* <IonContent className="ion-padding mx-auto no-scroll" fullscreen> */}
+        <div style={{width:'400px', maxWidth:'100%', margin:'auto'}}>
         <IonSegment value={currentSection} onIonChange={handleChange}>
         <IonSegmentButton value="LOGIN_PAGE">
           <IonLabel>Login</IonLabel>
@@ -41,8 +41,8 @@ const Auth: React.FC = () => {
       </IonSegment>
       {currentSection === "LOGIN_PAGE" ? <LoginPage/>:<SignUp/>}
         </div> 
-        </IonContent>
-      </IonPage>
+        {/* </IonContent> */}
+      
     </>
   );
 };

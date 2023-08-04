@@ -111,7 +111,7 @@ const App: React.FC = () => {
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
-      <FloatingButton></FloatingButton>
+      
     </IonApp>
   );
 };

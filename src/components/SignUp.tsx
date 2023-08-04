@@ -12,7 +12,7 @@ import {
 
 const SignUp: React.FC = () => {
   return (
-    <IonContent>
+    <>
       <IonList className="ion-padding-end">
         <IonItem>
           <IonInput
@@ -49,7 +49,7 @@ const SignUp: React.FC = () => {
       </IonList>
 
       <IonButton className='ion-margin' expand="block">Sign Up</IonButton>
-    </IonContent>
+    </>
   );
 };
 export default SignUp;
