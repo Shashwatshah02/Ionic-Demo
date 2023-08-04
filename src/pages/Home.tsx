@@ -262,7 +262,7 @@ const Home: React.FC = () => {
                   backgroundColor: "#F4F5F8",
                 }}
               >
-                <IonItem slot="header" color={'dark !important'}>
+                <IonItem slot="header" color={'dark'}>
                   <IonLabel>About the founder</IonLabel>
                 </IonItem>
 

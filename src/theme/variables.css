@@ -63,9 +63,9 @@ img::before {
   --ion-color-danger-tint: #ed576b;
 
   /** dark **/
-  --ion-color-dark: #222428;
+  --ion-color-dark: #f4f5f8;
   --ion-color-dark-rgb: 34, 36, 40;
-  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast: #000000;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
@@ -163,6 +163,8 @@ img::before {
    * -------------------------------------------
    */
 
+  
+
   .ios body {
     :root {
       --ion-background-color: #f9efff;
@@ -190,6 +192,8 @@ img::before {
       --ion-color-step-850: #262626;
       --ion-color-step-900: #191919;
       --ion-color-step-950: #0d0d0d;
+
+
     }
   }
 
