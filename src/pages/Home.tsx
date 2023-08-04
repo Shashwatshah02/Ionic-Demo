@@ -250,11 +250,11 @@ const Home: React.FC = () => {
               economic stability, and social justice.
             </p>
             <IonAccordionGroup className="ion-padding-bottom">
-              <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px'}}>
-                <IonItem slot="header" color="dark">
+              <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px',backgroundColor: '#F4F5F8'}}>
+                <IonItem slot="header">
                   <IonLabel>About the founder</IonLabel>
                 </IonItem>
-                <div className="ion-padding" slot="content" style={{backgroundColor: '#F4F5F8'}}>
+                <div className="ion-padding" slot="content">
                   Hi, I&apos;m Rom, a social entrepreneur and the founder of
                   EarthTag. I believe that our passion leads us to our cosmic
                   destiny, and everything we need for our journey is gifted to
