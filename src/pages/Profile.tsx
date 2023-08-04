@@ -13,7 +13,16 @@ import { useState } from "react";
 import EditProfile from "./EditProfile";
 import YourProfile from "../components/YourProfile";
 const Profile: React.FC = () => {
-  const [page, setPage] = useState("complete-profile");
+  const [page, setPage] = useState("");
+  // const handleChange = () => {
+  //     if (page == "") {
+  //       setPage("login");
+  //     } else if (page == "login") {
+  //       setPage("complete-profile");
+  //     } else if (page == "complete-profile") {
+  //       setPage("view-profile");
+  //     }
+  //   };
   return (
     <IonPage>
       {/* <Header /> */}
@@ -36,7 +45,18 @@ const Profile: React.FC = () => {
           {page === "" ? <Auth></Auth> : null}
           {page === "login" ? <EditProfile></EditProfile> : null}
           {page === "complete-profile" ? <YourProfile></YourProfile> : null}
+
+          
         </div>
+        <IonButton className="ion-margin-bottom" expand="block" onClick={()=> setPage('login')}>
+              Edit - Profile
+          </IonButton>
+          <IonButton className="ion-margin-bottom" expand="block" onClick={()=> setPage('complete-profile')}>
+              Profile
+          </IonButton>
+          <IonButton className="ion-margin-bottom" expand="block" onClick={()=> setPage('')}>
+              Login
+          </IonButton>
       </IonContent>
     </IonPage>
   );

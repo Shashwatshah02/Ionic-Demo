@@ -37,7 +37,7 @@ const LoginPage: React.FC = () => {
         </IonItem>
       </IonList>
 
-      <IonButton className="ion-margin" expand="block">
+      <IonButton className="ion-margin" expand="block" href="/profile">
         Sign In
       </IonButton>
 

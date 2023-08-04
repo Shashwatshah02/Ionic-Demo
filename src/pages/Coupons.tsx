@@ -421,12 +421,14 @@ const Coupons: React.FC = () => {
             padding: "10px",
           }}
         >
+          <a href="mailto:romil@earthtag.ooo?subject=Suggest a Brand">
           <IonButton className="ion-margin-bottom" expand="block">
             <IonIcon slot="start" icon={bulb}></IonIcon>
-            Contribute with your time
+            Suggest a Brand
           </IonButton>
-          <a href="mailto:romil@earthtag.ooo?subject=Ideas">
-            <IonButton expand="block">
+          </a>
+          <a href="mailto:romil@earthtag.ooo?subject=List your Brand">
+            <IonButton className="ion-margin-bottom" expand="block">
               {/* <IonIcon slot="start" icon={bulb}></IonIcon> */}
               List your brand or service here
             </IonButton>
