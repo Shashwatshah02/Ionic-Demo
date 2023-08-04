@@ -86,7 +86,12 @@ const Home: React.FC = () => {
       <IonContent fullscreen={true}>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle className="ion-no-padding ion-padding-horizontal" size="large">Home</IonTitle>
+            <IonTitle
+              className="ion-no-padding ion-padding-horizontal"
+              size="large"
+            >
+              Home
+            </IonTitle>
             {/* <IonButtons collapse={true} slot="end">
               <IonButton
                 id="open-modal-home-title"
@@ -94,8 +99,8 @@ const Home: React.FC = () => {
               >
                 <IonIcon icon={personOutline} />
               </IonButton> */}
-              {/* <Modal title = 'Shashwat' mode={isOpenTitle} handleClick = {() => setIsOpenTitle(false)}/> */}
-              {/* <IonModal
+            {/* <Modal title = 'Shashwat' mode={isOpenTitle} handleClick = {() => setIsOpenTitle(false)}/> */}
+            {/* <IonModal
                 className="auto-height"
                 trigger="open-modal-home-title"
                 isOpen={isOpenTitle}
@@ -134,13 +139,12 @@ const Home: React.FC = () => {
           <iframe
             width="100%"
             height="650px"
-            
             src="https://www.youtube.com/embed/PXr21AW6f_A"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             frameBorder="0"
-            style={{borderRadius:'10px'}}
+            style={{ borderRadius: "10px" }}
           ></iframe>
           <IonText>
             <h3>
@@ -166,19 +170,19 @@ const Home: React.FC = () => {
                 // style={{width:'400px', maxwidth:'100%'}}
               ></IonInput>
             </IonItem>
-            <IonButton className="ion-no-margin ion-margin-vertical text-left" size="default">
+            <IonButton
+              className="ion-no-margin ion-margin-vertical text-left"
+              size="default"
+            >
               Subscribe
             </IonButton>
           </div>
-          <IonButton
-          className="item-left"
-          expand="block"
-          >
+          <IonButton className="item-left" expand="block">
             <img
-                src={insta}
-                alt="instagram logo"
-                style={{ height: "20px", padding:'0 5px' }}
-              />
+              src={insta}
+              alt="instagram logo"
+              style={{ height: "20px", padding: "0 5px" }}
+            />
             Follow us on Instagram
           </IonButton>
           {/* <div
@@ -250,10 +254,18 @@ const Home: React.FC = () => {
               economic stability, and social justice.
             </p>
             <IonAccordionGroup className="ion-padding-bottom">
-              <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px',backgroundColor: '#F4F5F8'}}>
-                <IonItem slot="header">
+              <IonAccordion
+                value="first"
+                style={{
+                  border: "0.1px solid",
+                  borderRadius: "10px",
+                  backgroundColor: "#F4F5F8",
+                }}
+              >
+                <IonItem slot="header" color={'dark !important'}>
                   <IonLabel>About the founder</IonLabel>
                 </IonItem>
+
                 <div className="ion-padding" slot="content">
                   Hi, I&apos;m Rom, a social entrepreneur and the founder of
                   EarthTag. I believe that our passion leads us to our cosmic
@@ -309,11 +321,18 @@ const Home: React.FC = () => {
             </p>
           </IonText>
           <IonAccordionGroup className="ion-padding-bottom">
-            <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px'}}>
+            <IonAccordion
+              value="first"
+              style={{ border: "0.1px solid", borderRadius: "10px" }}
+            >
               <IonItem slot="header" color="dark">
                 <IonLabel>Talk about climate change</IonLabel>
               </IonItem>
-              <div className="ion-padding" slot="content" style={{backgroundColor: '#F4F5F8'}}>
+              <div
+                className="ion-padding"
+                slot="content"
+                style={{ backgroundColor: "#F4F5F8" }}
+              >
                 So much is happening but no one talks about it. There are no
                 emergency meetings, no headlines, no breaking news. No one is
                 acting as if we were in a crisis. Scientists and advocates are
@@ -334,11 +353,18 @@ const Home: React.FC = () => {
             </IonAccordion>
           </IonAccordionGroup>
           <IonAccordionGroup className="ion-padding-bottom">
-            <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px'}}>
+            <IonAccordion
+              value="first"
+              style={{ border: "0.1px solid", borderRadius: "10px" }}
+            >
               <IonItem slot="header" color="dark">
                 <IonLabel>Encourage Sustainable Choices</IonLabel>
               </IonItem>
-              <div className="ion-padding" slot="content" style={{backgroundColor: '#F4F5F8'}}>
+              <div
+                className="ion-padding"
+                slot="content"
+                style={{ backgroundColor: "#F4F5F8" }}
+              >
                 María Fernanda Espinosa Garcés, the President of the General
                 Assembly said in 2019 at the UN headquarters in New York that we
                 are the last generation that can prevent irreparable damage to
@@ -361,12 +387,19 @@ const Home: React.FC = () => {
               </div>
             </IonAccordion>
           </IonAccordionGroup>
-          <IonAccordionGroup className="ion-padding-bottom" >
-            <IonAccordion value="first" style={{border:'0.1px solid', borderRadius:'10px'}}>
+          <IonAccordionGroup className="ion-padding-bottom">
+            <IonAccordion
+              value="first"
+              style={{ border: "0.1px solid", borderRadius: "10px" }}
+            >
               <IonItem slot="header" color="dark">
                 <IonLabel>Be a conscious consumer</IonLabel>
               </IonItem>
-              <div className="ion-padding" slot="content" style={{backgroundColor: '#F4F5F8'}}>
+              <div
+                className="ion-padding"
+                slot="content"
+                style={{ backgroundColor: "#F4F5F8" }}
+              >
                 Considering the impact of our purchases on the environment is
                 called conscious consumerism. Everytime we buy something the
                 Earth pays too. For every cotton t-shirt you buy, the Earth has
@@ -387,22 +420,13 @@ const Home: React.FC = () => {
               </div>
             </IonAccordion>
           </IonAccordionGroup>
-          <IonButton
-          expand="block"
-          className="ion-margin-bottom"
-          >
+          <IonButton expand="block" className="ion-margin-bottom">
             <IonIcon slot="start" icon={star}></IonIcon>
             Give ideas for our community
           </IonButton>
-          <IonButton
-          className="text-left"
-          slot="start"
-          expand="block"
-          >
-            
+          <IonButton className="text-left" slot="start" expand="block">
             <IonIcon slot="start" icon={timeOutline}></IonIcon>
             Contribute with your time
-            
           </IonButton>
         </div>
       </IonContent>
