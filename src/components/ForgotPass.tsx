@@ -12,7 +12,7 @@ import {
   IonPage,
   IonIcon,
 } from "@ionic/react";
-import { arrowBack, caretBack } from "ionicons/icons";
+  import { arrowBack, caretBack } from "ionicons/icons";
 import Home from "../pages/Auth";
 const ForgotPass: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const ForgotPass: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButton fill="clear" onClick={() => history.back()} slot="start">
-            <IonIcon slot="icon-only" icon={arrowBack} />
+            <IonIcon slot="icon-only" icon={arrowBack} color={"light"}/>
           </IonButton>
           <IonTitle>Forgot Password</IonTitle>
         </IonToolbar>
